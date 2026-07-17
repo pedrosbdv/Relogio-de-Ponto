@@ -1,0 +1,29 @@
+<div class="container-fluid min-vh-100 d-flex align-items-center justify-content-center">
+  <div class="login-container">
+
+    <div class="login-header text-center mb-4">
+      <h1 class="fw-bold">Entrar</h1>
+      <p>Insira seu email e senha para entrar!</p>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+      <div class="mb-3">
+        <app-input formControlName="email" label="Email *" placeholder="info@gmail.com" size="small" type="email"></app-input>
+      </div>
+
+      <div class="mb-4">
+        <div class="position-relative">
+          <app-input formControlName="senha" label="Senha *" placeholder="Digite sua senha" size="small" type="password"></app-input>
+        </div>
+      </div>
+
+      <app-buttons variant="auth" type="submit" icon="bi bi-box-arrow-in-right">Entrar</app-buttons>
+    
+    </form>
+
+    <div class="signup-footer text-center mt-4">  Não possui uma conta? 
+      <a routerLink="/cadastro">Cadastre-se</a> 
+    </div>
+  </div>
+</div>

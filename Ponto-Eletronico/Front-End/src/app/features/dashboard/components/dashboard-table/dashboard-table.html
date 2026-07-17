@@ -1,0 +1,19 @@
+<div class="table-responsive">
+  <table class="table w-100">
+    <thead>
+      <tr>
+        <th
+          class="text-start fw-semibold py-3 px-4"
+          *ngFor="let column of columns">
+          {{ column.header }}
+        </th>
+        <th *ngIf="hasActions" class="text-center">
+          Ações
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-content></ng-content>
+    </tbody>
+  </table>
+</div>

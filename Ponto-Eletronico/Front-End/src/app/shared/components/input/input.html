@@ -1,0 +1,4 @@
+<div class="form-group d-flex flex-column gap-2" [class.small]="size === 'small'">
+  <label class="fw-medium">{{ label }}</label>
+  <input class="w-100" (blur)="onBlur()" [type]="type" [placeholder]="placeholder" [value]="value" [disabled]="disabled" [attr.maxlength]="maxlength" (keydown)="onKeyDown($event)" (input)="onInput($event)">
+</div>

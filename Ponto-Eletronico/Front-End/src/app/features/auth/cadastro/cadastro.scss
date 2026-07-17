@@ -1,0 +1,34 @@
+.login-container {
+    width:100%;
+    max-width:720px;
+    background:var(--superfice);
+    border:1px solid var(--borda);
+    border-radius:18px;
+    padding:2.5rem;
+    box-shadow:var(--sombra-card);
+}
+
+.signup-footer{
+    color:var(--texto-secondario);
+    a{
+        color:var(--buscar);
+        font-weight:600;
+        text-decoration:none;
+        &:hover{
+            text-decoration:underline;
+        }
+    }
+}
+
+@media(max-width:768px){
+    .login-container{
+        max-width:500px;
+    }
+}
+
+@media(max-width:576px){
+    .login-container{
+        margin:20px;
+        padding:2rem;
+    }
+}

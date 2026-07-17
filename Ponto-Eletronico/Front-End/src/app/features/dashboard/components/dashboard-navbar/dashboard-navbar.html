@@ -1,0 +1,18 @@
+<header class="topbar d-flex align-items-center justify-content-between sticky-top gap-3 px-4 py-0">
+  <div class="d-flex align-items-center gap-3 flex-fill">
+    <app-buttons (buttonClick)="toggleSidebar()" variant="secondary" icon="bi bi-list"> </app-buttons>
+  </div>
+
+  <div class="d-flex align-items-center gap-2 flex-shrink-0">
+    <app-buttons
+      variant="secondary"
+      (buttonClick)="toggleTheme()"
+      [icon]="themeService.isDark() ? 'bi bi-sun' : 'bi bi-moon'">
+    </app-buttons>
+
+    <div role="button" class="user-chip pt-1 pb-1 ps-1 pe-2 d-flex align-items-center gap-2 rounded-2">
+      <div class="avatar justify-content-center align-items-center rounded-circle flex-shrink-0 text-white fw-semibold d-flex">{{ (nomeUsuario | slice:0:1) | uppercase }}</div>
+      <span class="fw-semibold white-space">{{ nomeUsuario }}</span>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,105 @@
+/* You can add global styles to this file, and also import other style files */
+@import url(https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap) layer(base);
+
+:root {
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --bg: #f4f6fb;
+  --warning-tint: rgba(247, 144, 9, 0.14);
+  --success-tint: rgba(23, 178, 106, 0.14);
+  --error-tint: rgba(240, 68, 56, 0.14);
+
+
+  //Cards
+    --sombra-card: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
+    --borda: #e6e9f2;
+  //
+
+  //Textos
+    --texto-primario: #101828;
+    --texto-secondario: #6b7387;
+    --texto-tertiary: #98a1b8;
+  //
+
+  //Superfice
+    --superfice: #ffffff;
+    --superfice-hover: #f3f5fb;
+  //
+
+  //Cores de feedback
+    --sucesso: #17b26a;
+    --sucesso-hover: #0fa15c;
+    --erro: #f04438;
+    --erro-hover: #f04438;
+    --buscar: #465fff;
+    --buscar-hover:#3547d6;
+    --atencao: #f79009;
+    --atencao-hover: #f79000;
+  //
+}
+
+.dashboard-layout[data-theme='light'] {
+  --bg: #f4f6fb;
+
+  //Cards
+    --sombra-card: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
+    --borda: #e6e9f2;
+  //
+
+  //Textos
+    --texto-primario: #101828;
+    --texto-secondario: #6b7387;
+    --texto-tertiary: #98a1b8;
+  //
+
+  //Superfice
+    --superfice: #ffffff;
+    --superfice-hover: #f3f5fb;
+  //
+
+  td,p{
+    color: var(--texto-secondario);
+  }
+
+  h1{
+    color: var(--texto-primario);
+  }
+  
+}
+
+.dashboard-layout[data-theme='dark'] {
+  --bg: #191b2c;
+
+  //Cards
+    --sombra-card: none;
+    --borda: #2c3049;
+  //
+
+  //Textos
+    --texto-primario: #f6f7fb;
+    --texto-secondario: #969ab0;
+    --texto-tertiary: #6e7288;
+  //
+
+  //Superfice
+    --superfice: #1f2236;
+    --superfice-hover: #262a41;
+  //
+
+  td,p{
+    color: var(--texto-secondario);
+  }
+
+  h1{
+    color: var(--texto-primario);
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+

@@ -1,0 +1,44 @@
+@use '../../shared/style/dashboard-card.scss';
+
+.header-center {
+  min-width: 180px;
+
+  .time {
+    color: var(--texto-primario);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .date {
+    font-size: 12.5px;
+    color: var(--texto-secondario);
+  }
+}
+
+.stats-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+// Layout do formulário de filtro desta tela: dois campos de data lado a lado
+.filters-home {
+  grid-template-columns: 1fr 1fr;
+  max-width: 480px;
+}
+
+@media (max-width: 767.98px) {
+  .header-card {
+    flex-direction: column;
+    align-items: flex-start !important;
+    text-align: left;
+  }
+
+  .header-center {
+    width: 100%;
+    text-align: left;
+  }
+
+  // Em telas pequenas, os dois campos de data empilham
+  .filters-home {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+}

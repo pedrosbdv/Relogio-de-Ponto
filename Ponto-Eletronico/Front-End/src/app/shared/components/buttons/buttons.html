@@ -1,0 +1,8 @@
+<button
+  [type]="type"
+  [disabled]="disabled"
+  [class]="'d-flex align-items-center justify-content-center gap-2 text-nowrap border-1 fw-semibold  btn btn-' + variant"
+  (click)="onClick()">
+  <i *ngIf="icon" class="bi" [ngClass]="icon"> </i>
+  <ng-content></ng-content>
+</button>

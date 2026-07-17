@@ -1,0 +1,21 @@
+.form-group {
+  label {
+    color: var(--texto-primario);
+  }
+
+  input {
+    height: 44px;
+    padding: 0 14px;
+    color: var(--texto-primario);
+    background: var(--superfice);
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    transition: 0.2s;
+
+    &:focus {
+      outline: none;
+      border-color: var(--buscar);
+      box-shadow: 0 0 0 3px rgba(70, 95, 255, 0.15);
+    }
+  }
+}

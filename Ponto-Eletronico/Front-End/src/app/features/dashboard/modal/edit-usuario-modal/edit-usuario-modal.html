@@ -1,0 +1,122 @@
+<div class="modal-header border-0 pb-0">
+
+  <h5 class="modal-title fw-bold">
+    Editar Usuário: {{ form.get('nome')?.value }}
+  </h5>
+
+  <button
+    type="button"
+    class="btn-close shadow-none"
+    (click)="activeModal.dismiss()"
+    aria-label="Close">
+  </button>
+
+</div>
+
+
+<div class="modal-body p-4">
+
+  <form
+    [formGroup]="form"
+    id="usuarioForm">
+
+    <div class="row">
+
+
+      <div class="col-md-6 mb-3">
+
+        <app-input
+          formControlName="nome"
+          label="Nome *"
+          placeholder="Digite o nome"
+          size="small"
+          type="text">
+        </app-input>
+
+      </div>
+
+
+      <div class="col-md-6 mb-3">
+
+        <app-input
+          formControlName="email"
+          label="Email *"
+          placeholder="Digite o email"
+          size="small"
+          type="email">
+        </app-input>
+
+      </div>
+
+
+      <div class="col-md-6 mb-3">
+
+        <app-input
+          formControlName="ramal"
+          label="Ramal *"
+          [apenasNumeros]="true"
+          [maxlength]="4"
+          placeholder="Digite o ramal"
+          size="small"
+          type="text">
+        </app-input>
+
+      </div>
+
+
+      <div class="col-md-6 mb-3">
+
+        <app-select formControlName="departamento"  valueType="number" label="Departamento *">
+            <option value="">Selecione o departamento</option>
+            <option value="0">RH</option>
+            <option value="1">Financeiro</option>
+            <option value="2">TI</option>
+            <option value="3">Logística</option>
+        </app-select>
+
+      </div>
+
+
+      <div class="col-12 mb-4">
+
+        <app-select formControlName="role" label="Tipo de Usuário *">
+          <option value="" selected>Selecione o tipo de usuário</option>
+          <option value="Comum">Comum</option>
+          <option value="Admin">Administrador</option>
+        </app-select>
+
+      </div>
+
+
+    </div>
+
+  </form>
+
+</div>
+
+
+<div class="modal-footer border-0">
+
+
+  <app-buttons
+    
+    variant="add"
+    icon="bi bi-check-circle"
+    (buttonClick)="editarUsuario()">
+
+    Editar Usuário
+
+  </app-buttons>
+
+
+  <app-buttons
+    variant="delete"
+    icon="bi bi-x-circle"
+    (buttonClick)="activeModal.dismiss()">
+
+    Cancelar
+
+  </app-buttons>
+
+
+</div>
