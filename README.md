@@ -15,6 +15,8 @@ Aplicação web para controle de ponto eletrônico, permitindo que funcionários
 - Angular 17+ (standalone components)
 - Reactive Forms
 - SweetAlert2
+- Boostrap 5
+- SCSS
 
 ## Funcionalidades
 
