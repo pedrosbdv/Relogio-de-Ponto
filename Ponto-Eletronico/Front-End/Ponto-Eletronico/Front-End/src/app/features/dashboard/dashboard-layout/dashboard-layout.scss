@@ -1,0 +1,25 @@
+.main {
+  background: var(--bg);
+  margin-left: 274px;
+  transition: .3s;
+
+  &.full {
+    margin-left: 0;
+  }
+}
+
+.content {
+  padding: 26px;
+}
+
+// Abaixo do breakpoint mobile, o conteúdo nunca tem margem lateral
+// (já que a sidebar virou overlay e não deve empurrar o layout)
+@media (max-width: 991.98px) {
+  .main {
+    margin-left: 0 !important;
+  }
+
+  .content {
+    padding: 16px;
+  }
+}

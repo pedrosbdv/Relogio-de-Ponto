@@ -1,0 +1,22 @@
+// Layout do filtro: Nome, Departamento, Ramal lado a lado
+.filters-usuario {
+  grid-template-columns: 1fr 1fr 200px;
+}
+
+@media (max-width: 991.98px) {
+  .filters-usuario {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .filters-usuario {
+    grid-template-columns: 1fr;
+  }
+}
+
+// A tabela de usuários rola horizontalmente em telas pequenas,
+// em vez de espremer as colunas até ficar ilegível
+.table-responsive {
+  overflow-x: auto;
+}

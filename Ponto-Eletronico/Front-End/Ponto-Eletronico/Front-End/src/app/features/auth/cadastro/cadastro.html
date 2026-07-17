@@ -1,0 +1,117 @@
+<div class="container-fluid min-vh-100 d-flex align-items-center justify-content-center">
+
+  <div class="login-container">
+
+    <div class="login-header text-center mb-4">
+      <h1 class="fw-bold">Criar Conta</h1>
+      <p class="m-0">
+        Preencha os dados abaixo para criar sua conta.
+      </p>
+    </div>
+
+    <form
+      [formGroup]="form"
+      (ngSubmit)="onSubmit()">
+
+      <div class="row">
+
+        <div class="col-md-6 mb-3">
+
+          <app-input formControlName="nome" label="Nome *" placeholder="Digite seu nome" size="small" type="text"></app-input>
+
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <app-input formControlName="email" label="Email *" placeholder="Digite seu email" size="small"  type="email"></app-input>
+        </div>
+
+        <div class="col-md-6 mb-3">
+
+          <app-input
+            formControlName="ramal"
+            label="Ramal *"
+            placeholder="Digite seu ramal"
+            size="small"
+            [maxlength]="4"
+            [apenasNumeros]="true"
+            type="text">
+          </app-input>
+
+        </div>
+
+        <div class="col-md-6 mb-3">
+
+        <app-select formControlName="departamento"  valueType="number" label="Departamento *">
+          <option value="" selected>Selecione o departamento</option>
+          <option value="0">RH</option>
+          <option value="1">Financeiro</option>
+          <option value="2">TI</option>
+          <option value="3">Logística</option>
+        </app-select>
+
+        </div>
+
+        <div class="col-md-6 mb-3">
+
+          <app-input
+            formControlName="senha"
+            label="Senha *"
+            placeholder="Digite sua senha"
+            size="small"
+            type="password">
+          </app-input>
+
+        </div>
+
+        <div class="col-md-6 mb-3">
+
+          <app-input
+            formControlName="confirmarSenha"
+            label="Confirmar Senha *"
+            placeholder="Confirme sua senha"
+            size="small"
+            type="password">
+          </app-input>
+
+        </div>
+
+        <div class="col-12 mb-4">
+
+          <app-select formControlName="role" label="Tipo de Usuário *">
+            <option value="" selected>Selecione o tipo de usuário</option>
+            <option value="Comum">Comum</option>
+            <option value="Admin">Administrador</option>
+          </app-select>
+
+        </div>
+
+      </div>
+
+      <app-buttons
+        class="w-100"
+        variant="auth"
+        type="submit"
+        icon="bi bi-person-plus"
+        >
+
+        Criar Conta
+
+      </app-buttons>
+
+    </form>
+
+    <div class="signup-footer text-center mt-4">
+
+      Já possui uma conta?
+
+      <a routerLink="/login">
+
+        Entrar
+
+      </a>
+
+    </div>
+
+  </div>
+
+</div>

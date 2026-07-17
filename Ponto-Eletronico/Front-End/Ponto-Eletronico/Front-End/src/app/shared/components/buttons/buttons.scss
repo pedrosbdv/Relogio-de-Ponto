@@ -1,0 +1,71 @@
+:host {
+  display: block;
+}
+
+.btn-search,
+.btn-add,
+.btn-edit,
+.btn-auth,
+.btn-delete,
+.btn-secondary {
+  font-size: 14px;
+  font-family: var(--font-sans);
+
+  i {
+    font-size: 15px;
+  }
+}
+
+.btn-search {
+  background: var(--buscar);
+  color: #fff;
+
+  &:hover {
+    background: var(--buscar-hover);
+  }
+}
+
+.btn-add {
+  background: var(--sucesso);
+  color:  #fff;
+
+  &:hover {
+    background: var(--sucesso-hover);
+  }
+}
+
+.btn-auth{
+  background: var(--sucesso);
+  color:  #fff;
+  width: 100%;
+  &:hover {
+    background: var(--sucesso-hover);
+  }
+}
+
+.btn-secondary {
+  background: var(--superfice);
+  color: var(--texto-primario);
+
+  &:hover {
+    background: var(--superfice-hover);
+  }
+}
+
+.btn-edit{
+  background: var(--atencao);
+  color:  #fff;
+
+  &:hover {
+    background: var(--atencao-hover);
+  }
+}
+
+.btn-delete{
+  background: var(--erro);
+  color:  #fff;
+
+  &:hover {
+    background: var(--erro-hover);
+  }
+}
