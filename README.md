@@ -150,8 +150,9 @@ sistema-ponto-eletronico/
 │       │   └── ApplicationDdContext.cs
 │       │
 │       ├── Migrations/
+│       │
 │       ├── appsettings.json
-│       ├── appsettings.Development.json
+│       ├── appsettings.Development.json    (fora do Git)
 │       └── Program.cs
 │
 ├── frontend/
@@ -159,8 +160,72 @@ sistema-ponto-eletronico/
 │       └── src/
 │           └── app/
 │               ├── core/
+│               │   ├── data-access/
+│               │   │   └── base-http.service.ts
+│               │   ├── guards/
+│               │   │   ├── auth.guard.ts
+│               │   │   └── role.guard.ts
+│               │   ├── interceptors/
+│               │   │   └── auth.interceptor.ts
+│               │   ├── models/
+│               │   │   ├── usuario.ts
+│               │   │   └── login.ts
+│               │   └── services/
+│               │       ├── auth.service.ts
+│               │       ├── usuario.service.ts
+│               │       └── registro-ponto.service.ts
+│               │
 │               ├── features/
+│               │   ├── auth/
+│               │   │   ├── login/
+│               │   │   │   ├── login.html
+│               │   │   │   ├── login.scss
+│               │   │   │   └── login.ts
+│               │   │   ├── cadastro/
+│               │   │   │   ├── cadastro.html
+│               │   │   │   ├── cadastro.scss
+│               │   │   │   └── cadastro.ts
+│               │   │   └── auth.routes.ts
+│               │   │
+│               │   └── dashboard/
+│               │       ├── components/
+│               │       │   ├── dashboard-sidebar/
+│               │       │   ├── dashboard-navbar/
+│               │       │   ├── dashboard-table/
+│               │       │   ├── dashboard-card-filter/
+│               │       │   ├── dashboard-buttons/
+│               │       │   ├── dashboard-input/
+│               │       │   └── dashboard-select/
+│               │       │
+│               │       ├── pages/
+│               │       │   ├── dashboard-home/
+│               │       │   ├── dashboard-usuario/
+│               │       │   ├── dashboard-consultar-pontos/
+│               │       │   └── dashboard-configuracao/
+│               │       │
+│               │       ├── shared/
+│               │       │   ├── config/
+│               │       │   │   ├── sidebar-menu.config.ts
+│               │       │   │   └── dashboard-table-headers.ts
+│               │       │   └── service/
+│               │       │       ├── sidebar.service.ts
+│               │       │       └── theme.service.ts
+│               │       │
+│               │       ├── dashboard-layout/
+│               │       │   ├── dashboard-layout.html
+│               │       │   ├── dashboard-layout.scss
+│               │       │   └── dashboard-layout.ts
+│               │       │
+│               │       └── dashboard.routes.ts
+│               │
 │               ├── shared/
+│               │   ├── services/
+│               │   │   └── form-validation.service.ts
+│               │   ├── validators/
+│               │   │   └── password.validator.ts
+│               │   └── style/
+│               │       └── dashboard-card.scss
+│               │
 │               ├── app.config.ts
 │               └── app.routes.ts
 │
