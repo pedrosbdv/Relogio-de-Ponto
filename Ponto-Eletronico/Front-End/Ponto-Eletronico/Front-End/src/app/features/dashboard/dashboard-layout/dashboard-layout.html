@@ -1,9 +1,0 @@
-<div class="dashboard-layout d-flex min-vh-100" [attr.data-theme]="themeService.isDark() ? 'dark' : 'light'">
-  <app-dashboard-sidebar ></app-dashboard-sidebar>
-  <div class="main d-flex flex-column flex-fill" [class.full]="!isOpen()">
-    <app-dashboard-navbar></app-dashboard-navbar>
-    <main class="content flex-fill">
-      <router-outlet></router-outlet>
-    </main>
-  </div>
-</div>
